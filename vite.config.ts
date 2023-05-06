@@ -29,10 +29,10 @@ export default defineConfig({
     cssCodeSplit: true,
     lib: {
       // Could also be a dictionary or array of multiple entry points
-      entry: "src/components/my-library-vue-ts.ts",
-      name: 'my-library-vue-ts',
+      entry: "src/components/vue-3-quick-menu-vue-ts.ts",
+      name: 'vue-3-quick-menu-vue-ts',
       formats: ["es", "cjs", "umd"],
-      fileName: format => `my-library-vue-ts.${format}.js`
+      fileName: format => `vue-3-quick-menu-vue-ts.${format}.js`
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
@@ -43,7 +43,7 @@ export default defineConfig({
       external: ['vue'],
       output: {
         assetFileNames: (assetInfo) => {
-          if (assetInfo.name === 'main.css') return 'my-library-vue-ts.css';
+          if (assetInfo.name === 'main.css') return 'vue-3-quick-menu-vue-ts.css';
           return assetInfo.name;
         },
         exports: "named",

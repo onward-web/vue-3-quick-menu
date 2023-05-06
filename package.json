@@ -6,16 +6,16 @@
   },
   "private": false,
   "version": "0.0.1",
-  "main": "./dist/my-library-vue-ts.umd.js",
-  "module": "./dist/my-library-vue-ts.es.js",
+  "main": "./dist/vue-3-quick-menu-vue-ts.umd.js",
+  "module": "./dist/vue-3-quick-menu-vue-ts.es.js",
   "exports": {
     ".": {
-      "import": "./dist/my-library-vue-ts.es.js",
-      "require": "./dist/my-library-vue-ts.umd.js"
+      "import": "./dist/vue-3-quick-menu-vue-ts.es.js",
+      "require": "./dist/vue-3-quick-menu-vue-ts.umd.js"
     },
-    "./dist/my-library-vue-ts.css": {
-      "import": "./dist/my-library-vue-ts.css",
-      "require": "./dist/my-library-vue-ts.css"
+    "./dist/vue-3-quick-menu-vue-ts.css": {
+      "import": "./dist/vue-3-quick-menu-vue-ts.css",
+      "require": "./dist/vue-3-quick-menu-vue-ts.css"
     }
   },
   "types": "./dist/main.d.ts",
