@@ -2,13 +2,10 @@
   "name": "vue-3-quick-menu",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/blacksonic/vue-3-playground.git"
+    "url": "git+https://github.com/onward-web/vue-3-quick-menu.git"
   },
   "private": false,
   "version": "0.0.1",
-  "files": [
-    "dist"
-  ],
   "main": "./dist/my-library-vue-ts.umd.js",
   "module": "./dist/my-library-vue-ts.es.js",
   "exports": {
