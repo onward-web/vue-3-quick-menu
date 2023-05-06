@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+
 import Vue3QuickMenu from './components/Vue3QuickMenu.vue'
 </script>
 
@@ -12,7 +12,6 @@ import Vue3QuickMenu from './components/Vue3QuickMenu.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue" />
   <Vue3QuickMenu :menu-count = "4" />
 </template>
 
