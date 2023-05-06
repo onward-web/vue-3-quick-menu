@@ -1,14 +1,41 @@
 {
-  "name": "vue-quick-menu",
-  "description": "vue-quick-menu",
-  "version": "0.0.1",
-  "author": "ashleylv <ashley_lyf@icloud.com>",
+  "name": "vue-3-quick-menu",
   "private": false,
-  "main": "src/index.js",  
-  "dependencies": {   
+  "version": "0.0.1",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/my-library-vue-ts.umd.js",
+  "module": "./dist/my-library-vue-ts.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/my-library-vue-ts.es.js",
+      "require": "./dist/my-library-vue-ts.umd.js"
+    },
+    "./dist/my-library-vue-ts.css": {
+      "import": "./dist/my-library-vue-ts.css",
+      "require": "./dist/my-library-vue-ts.css"
+    }
+  },
+  "types": "./dist/main.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.47",
     "floating-vue": "^2.0.0-beta.20",
-    "@nuxtjs/svg-sprite": "^1.0.2",
-    "vue": "^3.2.47"
-  }, 
-  "license": "MIT"
+    "@nuxtjs/svg-sprite": "^1.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.1",
+    "path": "^0.12.7",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "typescript": "~5.0.4",
+    "vite": "^4.3.4",
+    "vite-plugin-dts": "^2.3.0",
+    "vue-tsc": "^1.6.4"
+  }
 }
