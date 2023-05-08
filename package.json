@@ -6,8 +6,8 @@
   },
   "private": false,
   "version": "0.0.1",
-  "main": "./dist/vue-3-quick-menu-vue-ts.umd.js",
-  "module": "./dist/vue-3-quick-menu-vue-ts.es.js",
+  "main": "./dist/vue-3-quick-menu-vue-ts.cjs.js",
+  "module": "./dist/vue-3-quick-menu-vue-ts.esm.js",
   "exports": {
     ".": {
       "import": "./dist/vue-3-quick-menu-vue-ts.es.js",

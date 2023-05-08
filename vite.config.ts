@@ -31,7 +31,7 @@ export default defineConfig({
       // Could also be a dictionary or array of multiple entry points
       entry: "src/components/vue-3-quick-menu-vue-ts.ts",
       name: 'vue-3-quick-menu-vue-ts',
-      formats: ["es", "cjs", "umd", "system"],
+      formats: ["esm", "cjs", "umd", "system"],
       fileName: format => `vue-3-quick-menu-vue-ts.${format}.js`
     },
     rollupOptions: {
