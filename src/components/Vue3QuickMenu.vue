@@ -2,13 +2,13 @@
   <div class="quick-menu" ref="quickMenu" :style="quickMenuStyle">
     <div v-for="(n, key) in menuCount" :key="key" class="menu-item" :style="getSubMenuStyle(n-1)"  :ref="'quickMenuItem_'+ key" :id="'quickMenuItem_'+ key">
 
-      <router-link v-if="urlsData[n-1].type === 'routeLink'" :to="urlsData[n-1].type" :target="urlsData[n-1].target" :style="itemMenuStyle" @mouseover.stop="mouseEnterSubMenu" @mouseout.stop="mouseOutSubMenu" :class="linkIconClassList[n-1]" ref="link"  :title=$t(itemTitleList[n-1]) v-tooltip="tooltipData[n-1]">
+      <router-link v-if="urlsData[n-1].type === 'routeLink'" :to="urlsData[n-1].type" :target="urlsData[n-1].target" :style="itemMenuStyle" @mouseover.stop="mouseEnterSubMenu" @mouseout.stop="mouseOutSubMenu" :class="linkIconClassList[n-1]" ref="link"  :title=itemTitleList[n-1] v-tooltip="tooltipData[n-1]">
         <svg-icon :name="iconNameList[n-1]" />
       </router-link>
-      <a v-else-if="urlsData[n-1].type === 'external'" :target="urlsData[n-1].target" :href="urlsData[n-1].url" :style="itemMenuStyle" @mouseover.stop="mouseEnterSubMenu" @mouseout.stop="mouseOutSubMenu" :class="linkIconClassList[n-1]" ref="link"  :title=$t(itemTitleList[n-1]) v-tooltip="tooltipData[n-1]">
+      <a v-else-if="urlsData[n-1].type === 'external'" :target="urlsData[n-1].target" :href="urlsData[n-1].url" :style="itemMenuStyle" @mouseover.stop="mouseEnterSubMenu" @mouseout.stop="mouseOutSubMenu" :class="linkIconClassList[n-1]" ref="link"  :title=itemTitleList[n-1] v-tooltip="tooltipData[n-1]">
         <svg-icon :name="iconNameList[n-1]" />
       </a>
-      <a v-else :target="urlsData[n-1].target" :style="itemMenuStyle"  @mouseover.stop="mouseEnterSubMenu" @mouseout.stop="mouseOutSubMenu" @click="processCallback(key)" :class="linkIconClassList[n-1]" ref="link" :title=$t(itemTitleList[n-1]) v-tooltip="tooltipData[n-1]">
+      <a v-else :target="urlsData[n-1].target" :style="itemMenuStyle"  @mouseover.stop="mouseEnterSubMenu" @mouseout.stop="mouseOutSubMenu" @click="processCallback(key)" :class="linkIconClassList[n-1]" ref="link" :title=itemTitleList[n-1] v-tooltip="tooltipData[n-1]">
         <svg-icon :name="iconNameList[n-1]" />
       </a>
 

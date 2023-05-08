@@ -1,10 +1,10 @@
 import { defineComponent as N, computed as d, resolveComponent as S, resolveDirective as D, openBlock as m, createElementBlock as b, normalizeStyle as c, Fragment as q, renderList as E, withDirectives as y, createBlock as I, withModifiers as f, normalizeClass as p, withCtx as T, createVNode as C, createElementVNode as v } from "vue";
-const $ = (e, t) => {
+const O = (e, t) => {
   const s = e.__vccOpts || e;
   for (const [u, n] of t)
     s[u] = n;
   return s;
-}, O = N({
+}, $ = N({
   props: {
     menuCount: {
       type: Number,
@@ -137,7 +137,7 @@ function w(e, t, s, u, n, l) {
         class: p(e.linkIconClassList[o - 1]),
         ref_for: !0,
         ref: "link",
-        title: e.$t(e.itemTitleList[o - 1])
+        title: e.itemTitleList[o - 1]
       }, {
         default: T(() => [
           C(i, {
@@ -157,7 +157,7 @@ function w(e, t, s, u, n, l) {
         class: p(e.linkIconClassList[o - 1]),
         ref_for: !0,
         ref: "link",
-        title: e.$t(e.itemTitleList[o - 1])
+        title: e.itemTitleList[o - 1]
       }, [
         C(i, {
           name: e.iconNameList[o - 1]
@@ -174,7 +174,7 @@ function w(e, t, s, u, n, l) {
         class: p(e.linkIconClassList[o - 1]),
         ref_for: !0,
         ref: "link",
-        title: e.$t(e.itemTitleList[o - 1])
+        title: e.itemTitleList[o - 1]
       }, [
         C(i, {
           name: e.iconNameList[o - 1]
@@ -194,7 +194,7 @@ function w(e, t, s, u, n, l) {
     ], 4)
   ], 4);
 }
-const B = /* @__PURE__ */ $(O, [["render", w]]), Q = {
+const B = /* @__PURE__ */ O($, [["render", w]]), Q = {
   install: (e) => {
     e.component("Vue3QuickMenu", B);
   }
