@@ -26,6 +26,7 @@
 
 import { computed, defineComponent } from "vue";
 
+
 export default defineComponent({
   props: {
     menuCount:{
@@ -205,6 +206,4 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
 
-</style>

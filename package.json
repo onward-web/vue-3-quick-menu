@@ -5,18 +5,15 @@
     "url": "git+https://github.com/onward-web/vue-3-quick-menu.git"
   },
   "private": false,
-  "version": "0.0.12",
-  "main": "./dist/vue-3-quick-menu-vue-ts.umd.js",
-  "module": "./dist/vue-3-quick-menu-vue-ts.esm.mjs",
+  "version": "0.0.13",
+  "main": "./dist/vue-3-quick-menu.cjs.js",
+  "module": "./dist/vue-3-quick-menu.esm.js",
   "exports": {
     ".": {
-      "import": "./dist/vue-3-quick-menu-vue-ts.esm.mjs",
-      "require": "./dist/vue-3-quick-menu-vue-ts.umd.js"
+      "import": "./dist/vue-3-quick-menu.esm.js",
+      "require": "./dist/vue-3-quick-menu.cjs.js"
     },
-    "./dist/vue-3-quick-menu-vue-ts.css": {
-      "import": "./dist/vue-3-quick-menu-vue-ts.css",
-      "require": "./dist/vue-3-quick-menu-vue-ts.css"
-    }
+    "./dist/vue-3-quick-menu.css": "./dist/vue-3-quick-menu.css"
   },
   "types": "./dist/main.d.ts",
   "scripts": {

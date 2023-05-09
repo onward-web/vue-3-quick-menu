@@ -1,6 +1,4 @@
-"use strict";
-Object.defineProperties(exports, { __esModule: { value: true }, [Symbol.toStringTag]: { value: "Module" } });
-const vue = require("vue");
+import { defineComponent, computed, resolveComponent, resolveDirective, openBlock, createElementBlock, normalizeStyle, Fragment, renderList, withDirectives, createBlock, withModifiers, normalizeClass, withCtx, createVNode, createElementVNode } from "vue";
 const _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
   for (const [key, val] of props) {
@@ -8,7 +6,7 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const _sfc_main = vue.defineComponent({
+const _sfc_main = defineComponent({
   props: {
     menuCount: {
       type: Number,
@@ -49,26 +47,26 @@ const _sfc_main = vue.defineComponent({
     }
   },
   setup(props) {
-    const isTop = vue.computed(() => {
+    const isTop = computed(() => {
       return props.position.includes("top");
     });
-    const isLeft = vue.computed(() => {
+    const isLeft = computed(() => {
       return props.position.includes("left");
     });
-    const quickMenuStyle = vue.computed(() => {
+    const quickMenuStyle = computed(() => {
       const topPosition = { top: "30px" }, bottomPosition = { bottom: "30px" }, leftPosition = { left: "30px" }, rightPosition = { right: "30px" };
       let style = isTop.value ? topPosition : bottomPosition;
       Object.assign(style, isLeft.value ? leftPosition : rightPosition);
       Object.assign(style, { transform: isLeft.value ? "rotate(-180deg)" : "rotate(180deg)" });
       return style;
     });
-    const buttonStyle = vue.computed(() => {
+    const buttonStyle = computed(() => {
       return {
         backgroundColor: props.backgroundColor,
         color: props.color
       };
     });
-    const itemMenuStyle = vue.computed(() => {
+    const itemMenuStyle = computed(() => {
       const style = {
         backgroundColor: props.backgroundColor,
         color: props.color
@@ -110,12 +108,12 @@ const _sfc_main = vue.defineComponent({
       let menuIconEl = this.$refs.link;
       if (!~menuEl.className.indexOf(" active")) {
         menuEl.className += " active";
-        menuIconEl.forEach(function(element, index) {
+        menuIconEl.forEach(function(element, index2) {
           element.className += " menu-animate";
         });
       } else {
         menuEl.className = menuEl.className.replace(" active", "");
-        menuIconEl.forEach(function(element, index) {
+        menuIconEl.forEach(function(element, index2) {
           element.className = element.className.replace(" menu-animate", "");
         });
       }
@@ -166,78 +164,78 @@ const _sfc_main = vue.defineComponent({
 const _hoisted_1 = ["id"];
 const _hoisted_2 = ["target", "href", "title"];
 const _hoisted_3 = ["target", "onClick", "title"];
-const _hoisted_4 = /* @__PURE__ */ vue.createElementVNode("div", { class: "bar" }, null, -1);
+const _hoisted_4 = /* @__PURE__ */ createElementVNode("div", { class: "bar" }, null, -1);
 const _hoisted_5 = [
   _hoisted_4
 ];
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
-  const _component_svg_icon = vue.resolveComponent("svg-icon");
-  const _component_router_link = vue.resolveComponent("router-link");
-  const _directive_tooltip = vue.resolveDirective("tooltip");
-  return vue.openBlock(), vue.createElementBlock("div", {
+  const _component_svg_icon = resolveComponent("svg-icon");
+  const _component_router_link = resolveComponent("router-link");
+  const _directive_tooltip = resolveDirective("tooltip");
+  return openBlock(), createElementBlock("div", {
     class: "quick-menu",
     ref: "quickMenu",
-    style: vue.normalizeStyle(_ctx.quickMenuStyle)
+    style: normalizeStyle(_ctx.quickMenuStyle)
   }, [
-    (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(_ctx.menuCount, (n, key) => {
-      return vue.openBlock(), vue.createElementBlock("div", {
+    (openBlock(true), createElementBlock(Fragment, null, renderList(_ctx.menuCount, (n, key) => {
+      return openBlock(), createElementBlock("div", {
         key,
         class: "menu-item",
-        style: vue.normalizeStyle(_ctx.getSubMenuStyle(n - 1)),
+        style: normalizeStyle(_ctx.getSubMenuStyle(n - 1)),
         ref_for: true,
         ref: "quickMenuItem_" + key,
         id: "quickMenuItem_" + key
       }, [
-        _ctx.urlsData[n - 1].type === "routeLink" ? vue.withDirectives((vue.openBlock(), vue.createBlock(_component_router_link, {
+        _ctx.urlsData[n - 1].type === "routeLink" ? withDirectives((openBlock(), createBlock(_component_router_link, {
           key: 0,
           to: _ctx.urlsData[n - 1].type,
           target: _ctx.urlsData[n - 1].target,
-          style: vue.normalizeStyle(_ctx.itemMenuStyle),
-          onMouseover: vue.withModifiers(_ctx.mouseEnterSubMenu, ["stop"]),
-          onMouseout: vue.withModifiers(_ctx.mouseOutSubMenu, ["stop"]),
-          class: vue.normalizeClass(_ctx.linkIconClassList[n - 1]),
+          style: normalizeStyle(_ctx.itemMenuStyle),
+          onMouseover: withModifiers(_ctx.mouseEnterSubMenu, ["stop"]),
+          onMouseout: withModifiers(_ctx.mouseOutSubMenu, ["stop"]),
+          class: normalizeClass(_ctx.linkIconClassList[n - 1]),
           ref_for: true,
           ref: "link",
           title: _ctx.itemTitleList[n - 1]
         }, {
-          default: vue.withCtx(() => [
-            vue.createVNode(_component_svg_icon, {
+          default: withCtx(() => [
+            createVNode(_component_svg_icon, {
               name: _ctx.iconNameList[n - 1]
             }, null, 8, ["name"])
           ]),
           _: 2
         }, 1032, ["to", "target", "style", "onMouseover", "onMouseout", "class", "title"])), [
           [_directive_tooltip, _ctx.tooltipData[n - 1]]
-        ]) : _ctx.urlsData[n - 1].type === "external" ? vue.withDirectives((vue.openBlock(), vue.createElementBlock("a", {
+        ]) : _ctx.urlsData[n - 1].type === "external" ? withDirectives((openBlock(), createElementBlock("a", {
           key: 1,
           target: _ctx.urlsData[n - 1].target,
           href: _ctx.urlsData[n - 1].url,
-          style: vue.normalizeStyle(_ctx.itemMenuStyle),
-          onMouseover: _cache[0] || (_cache[0] = vue.withModifiers((...args) => _ctx.mouseEnterSubMenu && _ctx.mouseEnterSubMenu(...args), ["stop"])),
-          onMouseout: _cache[1] || (_cache[1] = vue.withModifiers((...args) => _ctx.mouseOutSubMenu && _ctx.mouseOutSubMenu(...args), ["stop"])),
-          class: vue.normalizeClass(_ctx.linkIconClassList[n - 1]),
+          style: normalizeStyle(_ctx.itemMenuStyle),
+          onMouseover: _cache[0] || (_cache[0] = withModifiers((...args) => _ctx.mouseEnterSubMenu && _ctx.mouseEnterSubMenu(...args), ["stop"])),
+          onMouseout: _cache[1] || (_cache[1] = withModifiers((...args) => _ctx.mouseOutSubMenu && _ctx.mouseOutSubMenu(...args), ["stop"])),
+          class: normalizeClass(_ctx.linkIconClassList[n - 1]),
           ref_for: true,
           ref: "link",
           title: _ctx.itemTitleList[n - 1]
         }, [
-          vue.createVNode(_component_svg_icon, {
+          createVNode(_component_svg_icon, {
             name: _ctx.iconNameList[n - 1]
           }, null, 8, ["name"])
         ], 46, _hoisted_2)), [
           [_directive_tooltip, _ctx.tooltipData[n - 1]]
-        ]) : vue.withDirectives((vue.openBlock(), vue.createElementBlock("a", {
+        ]) : withDirectives((openBlock(), createElementBlock("a", {
           key: 2,
           target: _ctx.urlsData[n - 1].target,
-          style: vue.normalizeStyle(_ctx.itemMenuStyle),
-          onMouseover: _cache[2] || (_cache[2] = vue.withModifiers((...args) => _ctx.mouseEnterSubMenu && _ctx.mouseEnterSubMenu(...args), ["stop"])),
-          onMouseout: _cache[3] || (_cache[3] = vue.withModifiers((...args) => _ctx.mouseOutSubMenu && _ctx.mouseOutSubMenu(...args), ["stop"])),
+          style: normalizeStyle(_ctx.itemMenuStyle),
+          onMouseover: _cache[2] || (_cache[2] = withModifiers((...args) => _ctx.mouseEnterSubMenu && _ctx.mouseEnterSubMenu(...args), ["stop"])),
+          onMouseout: _cache[3] || (_cache[3] = withModifiers((...args) => _ctx.mouseOutSubMenu && _ctx.mouseOutSubMenu(...args), ["stop"])),
           onClick: ($event) => _ctx.processCallback(key),
-          class: vue.normalizeClass(_ctx.linkIconClassList[n - 1]),
+          class: normalizeClass(_ctx.linkIconClassList[n - 1]),
           ref_for: true,
           ref: "link",
           title: _ctx.itemTitleList[n - 1]
         }, [
-          vue.createVNode(_component_svg_icon, {
+          createVNode(_component_svg_icon, {
             name: _ctx.iconNameList[n - 1]
           }, null, 8, ["name"])
         ], 46, _hoisted_3)), [
@@ -245,11 +243,11 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         ])
       ], 12, _hoisted_1);
     }), 128)),
-    vue.createElementVNode("div", {
+    createElementVNode("div", {
       class: "menu",
-      style: vue.normalizeStyle(_ctx.buttonStyle)
+      style: normalizeStyle(_ctx.buttonStyle)
     }, [
-      vue.createElementVNode("div", {
+      createElementVNode("div", {
         class: "core-menu",
         onClick: _cache[4] || (_cache[4] = (...args) => _ctx.toggleMenu && _ctx.toggleMenu(...args))
       }, _hoisted_5)
@@ -257,11 +255,8 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   ], 4);
 }
 const Vue3QuickMenu = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]]);
-const main = {
-  install: (app) => {
-    app.component("Vue3QuickMenu", Vue3QuickMenu);
-  }
+const index = "";
+export {
+  Vue3QuickMenu
 };
-exports.Vue3QuickMenu = Vue3QuickMenu;
-exports.default = main;
-//# sourceMappingURL=vue-3-quick-menu-vue-ts.cjs.js.map
+//# sourceMappingURL=vue-3-quick-menu.esm.js.map
