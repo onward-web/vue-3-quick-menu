@@ -1,11 +1,11 @@
 {
-  "name": "@onward-web/vue-3-quick-menu",
+  "name": "vue-3-quick-menu",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/onward-web/vue-3-quick-menu.git"
   },
   "private": false,
-  "version": "0.0.11",
+  "version": "0.0.12",
   "main": "./dist/vue-3-quick-menu-vue-ts.umd.js",
   "module": "./dist/vue-3-quick-menu-vue-ts.esm.mjs",
   "exports": {
@@ -39,17 +39,5 @@
     "vite-plugin-dts": "^2.3.0",
     "vue-i18n": "^9.2.2",
     "vue-tsc": "^1.6.4"
-  },
-  "description": "This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.",
-  "bugs": {
-    "url": "https://github.com/onward-web/vue-3-quick-menu/issues"
-  },
-  "homepage": "https://github.com/onward-web/vue-3-quick-menu#readme",
-  "keywords": [
-    "vue-3",
-    "quick",
-    "menu"
-  ],
-  "author": "Vadym Maksymov",
-  "license": "ISC"
+  }
 }
